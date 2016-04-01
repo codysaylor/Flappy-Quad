@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phaser Game Template</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.6/phaser.min.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/preload.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gameover.js"></script>
+  <style>body{margin: 0;}</style>
+  <script>
+    (function() {
+      // Create a new game that fill screen
+      game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO);
+
+      // Add all states
+      game.state.add('Boot', Boot);
+      game.state.add('Preload', Preload);
+      game.state.add('Main', Main);
+      game.state.add('GameOver', GameOver);
+
+      // Start the first state
+      game.state.start('Boot');
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
